@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.official.kalisstudiodev.mytimerapp.com.offficial.simasleonavicius.mytimerapp.MainActivity">
+    <item
+        android:id="@+id/menumain_add_timer"
+        android:orderInCategory="100"
+        android:title="Add Timer" />
+    <item
+        android:id="@+id/menumain_remove_timer"
+        android:orderInCategory="101"
+        android:title="Remove Timer" />
+    <item
+        android:id="@+id/menumain_settings"
+        android:orderInCategory="102"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menumain_show_about"
+        android:orderInCategory="103"
+        android:title="Show About" />
+    <item
+        android:id="@+id/menumain_quit"
+        android:orderInCategory="104"
+        android:title="Quit" />
+    <item
+        android:id="@+id/menumain_confirm"
+        android:icon="@drawable/ic_check"
+        android:title="Item"
+        app:showAsAction="ifRoom" />
+</menu>

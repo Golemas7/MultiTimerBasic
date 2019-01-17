@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tli_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/rounded_borders_for_items"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tli_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="TimerName" />
+
+    <TextView
+        android:id="@+id/tli_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tli_timer"
+        app:layout_constraintTop_toBottomOf="@+id/tli_timer"
+        tools:text="Ended at 12/19 20:20" />
+
+    <ImageButton
+        android:id="@+id/tli_restart"
+        android:layout_width="45dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rounded_borders_for_button_secondary"
+        android:contentDescription="Button to restart the timer"
+        app:layout_constraintBottom_toBottomOf="@+id/tli_timer"
+        app:layout_constraintStart_toEndOf="@+id/tli_timer"
+        app:layout_constraintTop_toTopOf="@+id/tli_timer"
+        app:srcCompat="@drawable/ic_restart_timer" />
+
+    <ImageButton
+        android:id="@+id/tli_play"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_borders_for_button_primary"
+        android:contentDescription="Play th Timer"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tli_restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tli_restart"
+        app:srcCompat="@drawable/ic_start_continue_timer" />
+
+    <ImageButton
+        android:id="@+id/tli_stop"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_borders_for_button_error"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tli_restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tli_restart"
+        app:srcCompat="@drawable/ic_pause_timer" />
+
+    <ImageButton
+        android:id="@+id/tli_resume"
+        android:layout_width="75dp"
+        android:layout_height="0dp"
+        android:background="@drawable/rounded_borders_for_button_special"
+        android:contentDescription="Play or resume the timer"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tli_restart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tli_restart"
+        app:srcCompat="@drawable/ic_start_continue_timer" />
+
+    <TextView
+        android:id="@+id/tli_timer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tli_name"
+        tools:text="41D 15:59" />
+
+    <Button
+        android:id="@+id/tli_deleteMultiple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="18dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tli_play"
+        app:layout_constraintStart_toEndOf="@+id/tli_timer"
+        app:layout_constraintTop_toBottomOf="@+id/tli_name" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_finish_timer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundMain"
+    tools:context="com.offficial.kalisstudiodev.mytimerapp.FinishTimerActivityFragment"
+    tools:showIn="@layout/activity_finish_timer">
+
+    <TextView
+        android:id="@+id/fti_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Timer 06"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/fti_time"
+        app:layout_constraintEnd_toEndOf="@+id/fti_time"
+        app:layout_constraintStart_toStartOf="@+id/fti_time" />
+
+    <TextView
+        android:id="@+id/fti_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="00:00:05"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fti_overtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="+00:00:00"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/fti_time"
+        app:layout_constraintStart_toStartOf="@+id/fti_time"
+        app:layout_constraintTop_toBottomOf="@+id/fti_time" />
+
+    <ImageButton
+        android:id="@+id/fti_play"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/rounded_borders_for_button_primary"
+        android:padding="14dp"
+        android:src="@drawable/ic_start_continue_timer"
+        app:layout_constraintBottom_toBottomOf="@+id/fti_stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fti_stop" />
+
+    <Button
+        android:id="@+id/fti_stop"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_borders_for_button_error"
+        android:text="Stop"
+        android:textColor="@color/colorBackgroundMain"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fti_delete"
+        app:layout_constraintStart_toEndOf="@+id/fti_play"
+        app:layout_constraintTop_toBottomOf="@+id/fti_overtime" />
+
+    <ImageButton
+        android:id="@+id/fti_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_borders_for_button_delete"
+        android:padding="14dp"
+        android:src="@drawable/ic_delete_timer_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/fti_stop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fti_stop" />
+
+    <ImageView
+        android:id="@+id/fti_bell"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_bell"
+        app:layout_constraintBottom_toTopOf="@+id/fti_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
